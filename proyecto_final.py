@@ -111,13 +111,13 @@ class Interface():
             self.textBox.delete(1.0, tkinter.END)
             with open(self.resource_path('./data_red.txt'), 'r') as dataFile:
                 lines = dataFile.readlines()
-                for index, line in lines:
-                    print(index)
-                    line = line.split(";")
-                    resultsBox = " Usuario ID: "+line[0] + \
-                                 " Fecha: "+line[2] + \
-                                 "\n"
-                    self.textBox.insert(tkinter.INSERT, resultsBox, 'lightblue')
+                for index, line in enumerate(lines):
+                    if(index != 0):
+                        line = line.split(";")
+                        resultsBox = "ID: "+line[0] + \
+                                     " - Fecha: "+line[2] + \
+                                     "\n"
+                        self.textBox.insert(tkinter.INSERT, resultsBox, 'lightblue')
 
 
 if __name__ == "__main__":
