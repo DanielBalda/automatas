@@ -4,6 +4,7 @@
 
 import tkinter
 from tkcalendar import DateEntry
+import requests
 from datetime import date
 import os
 import sys
@@ -19,6 +20,11 @@ class Interface():
         return os.path.join(base_path, relative_path)
 
     def __init__(self):
+        url = 'http://nolaborables.com.ar/api/v2/feriados/2022'
+        response = requests.get(url)
+        if response.status_code == 200:
+            content = response.content
+            print(content)
         self.window = tkinter.Tk()
         self.window.config(background="#333333")
         self.window.title("Final Automatas y Gramaticas")
@@ -118,7 +124,13 @@ class Interface():
                                      " - Fecha: "+line[2] + \
                                      "\n"
                         self.textBox.insert(tkinter.INSERT, resultsBox, 'lightblue')
-
+    def api():
+        url = 'http://nolaborables.com.ar/api/v2/feriados/2022'        ##api
+        response = requests.get(url)
+        if response.status_code == 200:
+            content = response.content
+            print(content)
 
 if __name__ == "__main__":
     Interface()
+    
