@@ -2,6 +2,7 @@
 # no laborables (sábados y domingos).
 # Debe incluir la posibilidad de ingresar un rango de fechas
 
+
 import tkinter
 import os
 import sys
@@ -10,6 +11,7 @@ import re
 import pandas as pd
 import time as tm
 from tkinter import filedialog as fd
+from datetime import date
 
 
 class Interface():
@@ -197,14 +199,14 @@ class Interface():
 
     def apiData(self):
         self.date = []
-        for anio in range(5):
-            url = 'http://nolaborables.com.ar/api/v2/feriados/20'+str(anio+18)
+        for anio in range(2016, date.today().year+1):
+            url = 'http://nolaborables.com.ar/api/v2/feriados/'+str(anio)
             response = requests.get(url)
             if(response.status_code == 200):
                 for element in response.json():
                     self.date.append(f'{element["dia"]:02d}/' +
-                                     f'{element["mes"]:02d}/20' +
-                                     str(anio+18))
+                                     f'{element["mes"]:02d}/' +
+                                     str(anio))
             else:
                 # Aca deberiamos tener un archivo con los feriados
                 # en caso de que la API no responda
@@ -214,11 +216,12 @@ class Interface():
 
     def weekends(self):
         zone = 'America/Argentina/Buenos_Aires'
-        self.weekendsDate = pd.bdate_range(start=str(2018),
-                                           end=str(2020),
+        self.weekendsDate = pd.bdate_range(start=str(2016),
+                                           end=str(date.today().year+1),
                                            freq="C",
                                            weekmask="Sat Sun",
                                            tz=zone).strftime('%d/%m/%Y').tolist()
+        return self.weekendsDate
 
     def checkInputs(self):
         REpatternDate = r'(?:3[01]|[12][0-9]|0?[1-9])([-/])(0?[1-9]|1[1-2])\1\d{4}'
@@ -288,10 +291,6 @@ class Interface():
                                             'lightblue')
                         self.filterText.config(text=f'Filtrados: {filter}')
                         filter += 1
-                    else:
-                        print('ERROR2')
-                else:
-                    print("ERROR1")
             else:
                 self.errorText.config(text=f'Errores: {errors}')
                 errors += 1
@@ -322,10 +321,6 @@ class Interface():
                                                 'lightblue')
                             self.filterText.config(text=f'Filtrados: {filter}')
                             filter += 1
-                        else:
-                            print('ERROR2')
-                    else:
-                        print("ERROR1")
             else:
                 self.errorText.config(text=f'Errores: {errors}')
                 errors += 1
