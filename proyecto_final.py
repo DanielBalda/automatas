@@ -132,10 +132,10 @@ class Interface():
                                         fg="white")
 
         self.errorText = tkinter.Label(self.window,
-                                        text="Errores:",
-                                        font='Helvetica 10 bold',
-                                        background="#333333",
-                                        fg="white")
+                                       text="Errores:",
+                                       font='Helvetica 10 bold',
+                                       background="#333333",
+                                       fg="white")
 
         btnExit = tkinter.Button(self.window,
                                  text=" SALIR ",
@@ -288,6 +288,10 @@ class Interface():
                                             'lightblue')
                         self.filterText.config(text=f'Filtrados: {filter}')
                         filter += 1
+                    else:
+                        print('ERROR2')
+                else:
+                    print("ERROR1")
             else:
                 self.errorText.config(text=f'Errores: {errors}')
                 errors += 1
@@ -318,6 +322,10 @@ class Interface():
                                                 'lightblue')
                             self.filterText.config(text=f'Filtrados: {filter}')
                             filter += 1
+                        else:
+                            print('ERROR2')
+                    else:
+                        print("ERROR1")
             else:
                 self.errorText.config(text=f'Errores: {errors}')
                 errors += 1
