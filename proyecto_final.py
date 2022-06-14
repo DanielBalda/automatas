@@ -118,6 +118,25 @@ class Interface():
                                         activeforeground='#519ABA',
                                         relief='solid',
                                         command=lambda: self.main(2))
+
+        self.registerText = tkinter.Label(self.window,
+                                          text="Total:",
+                                          font='Helvetica 10 bold',
+                                          background="#333333",
+                                          fg="white")
+
+        self.filterText = tkinter.Label(self.window,
+                                        text="Filtrados:",
+                                        font='Helvetica 10 bold',
+                                        background="#333333",
+                                        fg="white")
+
+        self.errorText = tkinter.Label(self.window,
+                                        text="Errores:",
+                                        font='Helvetica 10 bold',
+                                        background="#333333",
+                                        fg="white")
+
         btnExit = tkinter.Button(self.window,
                                  text=" SALIR ",
                                  width=10,
@@ -143,6 +162,9 @@ class Interface():
         scroll.place(x=878, y=220, height=612)
         self.textBox.place(x=4, y=220)
         self.btnExport.place(x=20, y=845)
+        self.registerText.place(x=180, y=854)
+        self.filterText.place(x=400, y=854)
+        self.errorText.place(x=660, y=854)
         btnExit.place(x=790, y=845)
 
         # Crea y muestra la interfaz
@@ -166,6 +188,8 @@ class Interface():
                             filetypes=filetypes)
             with open(self.filename, 'r') as dataFile:
                 self.lines = dataFile.readlines()
+            self.window.title("Final Autómatas y Gramáticas | Archivo: " +
+                              self.filename.split('/')[-1])
             self.btnFilter['state'] = 'normal'
         except Exception:
             pass
@@ -179,8 +203,8 @@ class Interface():
             if(response.status_code == 200):
                 for element in response.json():
                     self.date.append(f'{element["dia"]:02d}/' +
-                                      f'{element["mes"]:02d}/20' +
-                                      str(anio+18))
+                                     f'{element["mes"]:02d}/20' +
+                                     str(anio+18))
             else:
                 # Aca deberiamos tener un archivo con los feriados
                 # en caso de que la API no responda
@@ -207,18 +231,18 @@ class Interface():
                                 highlightcolor="#519ABA")
             return True
         if re.match(REpatternDate, self.calFirst.get()) is None:
-            self.calFirst.config(highlightbackground="red",
-                                 highlightcolor="red")
+            self.calFirst.config(highlightbackground="#cf0909",
+                                 highlightcolor="#cf0909")
         else:
-            self.calFirst.config(highlightbackground="green",
-                                 highlightcolor="green")
+            self.calFirst.config(highlightbackground="#85e52e",
+                                 highlightcolor="#85e52e")
             checkDate += 1
         if re.match(REpatternDate, self.calLast.get()) is None:
-            self.calLast.config(highlightbackground="red",
-                                highlightcolor="red")
+            self.calLast.config(highlightbackground="#cf0909",
+                                highlightcolor="#cf0909")
         else:
-            self.calLast.config(highlightbackground="green",
-                                highlightcolor="green")
+            self.calLast.config(highlightbackground="#85e52e",
+                                highlightcolor="#85e52e")
             checkDate += 1
         if(checkDate == 2):
             self.flag = 1
@@ -246,6 +270,9 @@ class Interface():
         return False
 
     def simpleSearch(self):
+        errors = 0
+        filter = 0
+        self.export = []
         for index, line in enumerate(self.lines):
             line = line.split(";")
             if(index > 0 and len(line[0]) > 0 and len(line[2]) > 0):
@@ -259,10 +286,17 @@ class Interface():
                         self.textBox.insert(tkinter.INSERT,
                                             resultsBox,
                                             'lightblue')
+                        self.filterText.config(text=f'Filtrados: {filter}')
+                        filter += 1
             else:
-                print(f"ERROR LINE: {index}")
+                self.errorText.config(text=f'Errores: {errors}')
+                errors += 1
+            self.registerText.config(text=f'Total: {index}')
 
     def rangeSearch(self):
+        errors = 0
+        filter = 0
+        self.export = []
         for index, line in enumerate(self.lines):
             line = line.split(";")
             if(index > 0 and len(line[0]) > 0 and len(line[2]) > 0):
@@ -274,15 +308,20 @@ class Interface():
                     Last = tm.strptime(self.calLast.get(),
                                        "%d/%m/%Y")
                     if(dateFile >= First and dateFile <= Last):
-                        resultsBox = "User: "+line[1] + \
-                                        " - Fecha: "+date + \
-                                        " - Hora: "+time + \
-                                        "\n"
-                        self.textBox.insert(tkinter.INSERT,
-                                            resultsBox,
-                                            'lightblue')
+                        if(date in self.date or date in self.weekendsDate):
+                            resultsBox = "User: "+line[1] + \
+                                         " - Fecha: "+date + \
+                                         " - Hora: "+time + \
+                                         "\n"
+                            self.textBox.insert(tkinter.INSERT,
+                                                resultsBox,
+                                                'lightblue')
+                            self.filterText.config(text=f'Filtrados: {filter}')
+                            filter += 1
             else:
-                print(f"ERROR LINE: {index}")
+                self.errorText.config(text=f'Errores: {errors}')
+                errors += 1
+            self.registerText.config(text=f'Total: {index}')
 
     def main(self, option):
         if(option == 1 and self.checkInputs()):
