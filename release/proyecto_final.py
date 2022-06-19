@@ -7,10 +7,11 @@ import tkinter
 import os
 import sys
 import re
-import pandas as pd
 import time as tm
+from datetime import date as dt
 from file_system import File_System
 from api import Api
+from prettytable import PrettyTable
 
 
 class Interface(Api, File_System):
@@ -25,7 +26,7 @@ class Interface(Api, File_System):
         self.window.title("Final Autómatas y Gramáticas")
         self.window.iconbitmap(self.resource_path('./um.ico'))
         self.window.resizable(False, False)
-        w = 900
+        w = 915
         h = 900
         xPos = self.window.winfo_screenwidth()/2-w/2
         yPos = self.window.winfo_screenheight()/2-h/2
@@ -100,12 +101,12 @@ class Interface(Api, File_System):
                                    orient='vertical')
 
         self.textBox = tkinter.Text(self.window,
-                                    width=58,
+                                    width=59,
                                     height=19,
                                     background="#1E1E1E",
-                                    font=("Helvetica", 20),
+                                    font=("Consolas", 20),
                                     yscrollcommand=scroll.set)
-        self.textBox.tag_configure("lightblue", foreground="#11A8CD")
+        self.textBox.tag_configure("lightblue", foreground="#11A8CD", justify='center')
         scroll.config(command=self.textBox.yview)
 
         self.btnExport = tkinter.Button(self.window,
@@ -162,13 +163,13 @@ class Interface(Api, File_System):
         self.calLast.place(x=575, y=70)
         self.btnFilter.place(x=380, y=135)
         title3.place(x=372, y=185)
-        scroll.place(x=878, y=220, height=612)
+        scroll.place(x=893, y=220, height=612)
         self.textBox.place(x=4, y=220)
         self.btnExport.place(x=20, y=845)
         self.registerText.place(x=180, y=854)
-        self.filterText.place(x=400, y=854)
-        self.errorText.place(x=660, y=854)
-        btnExit.place(x=790, y=845)
+        self.filterText.place(x=410, y=854)
+        self.errorText.place(x=670, y=854)
+        btnExit.place(x=810, y=845)
 
         # Crea y muestra la interfaz
         self.window.mainloop()
@@ -187,12 +188,12 @@ class Interface(Api, File_System):
                               filename)
             self.btnFilter['state'] = 'normal'
             self.lines = lines
-        else:
+        elif(filename != ""):
             self.window.title("Final Autómatas y Gramáticas")
             self.btnFilter['state'] = 'disabled'
 
     def checkInputs(self):
-        REpatternDate = r'(?:3[01]|[12][0-9]|0?[1-9])([-/])(0?[1-9]|1[1-2])\1\d{4}'
+        REDate = r'(?:3[01]|[12][0-9]|0?[1-9])([-\/])(0?[1-9]|1[0-2])\1\d{4}'
         checkDate = 0
         self.flag = 0
         if(self.calFirst.get() == "" and self.calLast.get() == ""):
@@ -201,14 +202,14 @@ class Interface(Api, File_System):
             self.calLast.config(highlightbackground="#519ABA",
                                 highlightcolor="#519ABA")
             return True
-        if re.match(REpatternDate, self.calFirst.get()) is None:
+        if re.match(REDate, self.calFirst.get()) is None:
             self.calFirst.config(highlightbackground="#cf0909",
                                  highlightcolor="#cf0909")
         else:
             self.calFirst.config(highlightbackground="#85e52e",
                                  highlightcolor="#85e52e")
             checkDate += 1
-        if re.match(REpatternDate, self.calLast.get()) is None:
+        if re.match(REDate, self.calLast.get()) is None:
             self.calLast.config(highlightbackground="#cf0909",
                                 highlightcolor="#cf0909")
         else:
@@ -221,91 +222,94 @@ class Interface(Api, File_System):
         return False
 
     def checkId(self, id):
-        REpatternId = r'([a-z0-9]{16})'
-        if re.match(REpatternId, id):
+        REId = r'([a-z0-9]{16})'
+        if re.match(REId, id):
             return True
         return False
 
     def checkDate(self, date):
         # formato 00/00/0000
-        REpatternDate = r'(?:3[01]|[12][0-9]|0?[1-9])([-/])(0?[1-9]|1[1-2])\1\d{4}'
-        if re.match(REpatternDate, date):
+        REDate = r'(?:3[01]|[12][0-9]|0?[1-9])([-\/])(0?[1-9]|1[0-2])\1\d{4}'
+        if re.match(REDate, date):
             return True
         return False
 
     def checkTime(self, time):
         # formato 24Hs
-        REpatternDate = r'([0-1][0-9]|2[0-3])(:)([0-5][0-9])'
-        if re.match(REpatternDate, time):
+        REDate = r'([0-1]?[0-9]|2[0-3])(:)([0-5][0-9])'
+        if re.match(REDate, time):
             return True
         return False
 
-    def simpleSearch(self):
-        errors = 0
-        filter = 0
-        self.export = []
-        for index, line in enumerate(self.lines):
-            line = line.split(";")
-            if(index > 0 and len(line[0]) > 0 and len(line[2]) > 0):
-                date, time = line[2].split(' ')
-                if(self.checkId(line[0]) and self.checkDate(date) and self.checkTime(time)):
-                    if(date in self.date or date in self.weekendsDate):
-                        resultsBox = "User: "+line[1] + \
-                                     " - Fecha: "+date + \
-                                     " - Hora: "+time + \
-                                     "\n"
-                        self.textBox.insert(tkinter.INSERT,
-                                            resultsBox,
-                                            'lightblue')
-                        self.filterText.config(text=f'Filtrados: {filter}')
-                        filter += 1
-            else:
-                self.errorText.config(text=f'Errores: {errors}')
-                errors += 1
-            self.registerText.config(text=f'Total: {index}')
+    def checkRow(self, line):
+        if len(line[0]) > 0 and len(line[1]) > 0 and len(line[2]) > 0:
+            return True
+        return False
 
-    def rangeSearch(self):
+    def checkCols(self, line, date, time):
+        if self.checkId(line[0]) and \
+           self.checkDate(date) and \
+           self.checkTime(time):
+            return True
+        return False
+
+    def drawValues(self, data):
+        if(len(data) > 0):
+            table = PrettyTable(['ID', 'Usuario', 'Fecha', 'Hora'])
+            for line in data:
+                table.add_row([line[0][0], line[0][1], line[1], line[2]])
+            resultsBox = table
+            self.textBox.insert(tkinter.INSERT,
+                                resultsBox,
+                                'lightblue')
+        else:
+            resultsBox = "SIN COINCIDENCIAS"
+            self.textBox.insert(tkinter.INSERT,
+                                resultsBox,
+                                'lightblue')
+
+    def filter(self):
+        if self.calFirst.get() == "":
+            self.calFirst.insert(-1, "01/01/1999")
+        if self.calLast.get() == "":
+            self.calLast.insert(-1, dt.today().strftime("%d/%m/%Y"))
+        self.exportData = []
         errors = 0
-        filter = 0
-        self.export = []
-        for index, line in enumerate(self.lines):
-            line = re.split('; |, ', line)
-            if(index > 0 and len(line[0]) > 0 and len(line[2]) > 0):
+        filtered = 0
+        for index, line in enumerate(self.lines[1:], start=2):
+            line = line.split(";")
+            if self.checkRow(line):
                 date, time = line[2].split(' ')
-                if(self.checkId(line[0]) and self.checkDate(date) and self.checkTime(time)):
-                    dateFile = tm.strptime(date, "%d/%m/%Y")
-                    First = tm.strptime(self.calFirst.get(),
-                                        "%d/%m/%Y")
-                    Last = tm.strptime(self.calLast.get(),
-                                       "%d/%m/%Y")
-                    if(dateFile >= First and dateFile <= Last):
-                        if(date in self.date or date in self.weekendsDate):
-                            resultsBox = "User: "+line[1] + \
-                                         " - Fecha: "+date + \
-                                         " - Hora: "+time + \
-                                         "\n"
-                            self.textBox.insert(tkinter.INSERT,
-                                                resultsBox,
-                                                'lightblue')
-                            self.filterText.config(text=f'Filtrados: {filter}')
-                            filter += 1
+                if(self.checkCols(line, date, time)):
+                    if(date in self.date or date in self.weekendsDate):
+                        dateFile = tm.strptime(date, "%d/%m/%Y")
+                        First = tm.strptime(self.calFirst.get(),
+                                            "%d/%m/%Y")
+                        Last = tm.strptime(self.calLast.get(),
+                                           "%d/%m/%Y")
+                        if(dateFile >= First and dateFile <= Last):
+                            self.exportData.append([line, date, time])
+                            filtered += 1
+                else:
+                    errors += 1
             else:
-                self.errorText.config(text=f'Errores: {errors}')
                 errors += 1
-            self.registerText.config(text=f'Total: {index}')
+        self.drawValues(self.exportData)
+        self.filterText.config(text=f'Filtrados: {filtered}')
+        self.errorText.config(text=f'Errores: {errors}')
+        self.registerText.config(text=f'Total: {index-1}')
 
     def main(self, option):
         if(option == 1 and self.checkInputs()):
             self.textBox.delete(1.0, tkinter.END)
-            if(self.flag == 0):
-                self.simpleSearch()
-            else:
-                self.rangeSearch()
+            self.filter()
             self.btnExport['state'] = 'normal'
         if(option == 2):
-            # cambiar por el texto mostrado en el textBox
-            data = pd.read_csv(self.resource_path('./data_red.txt'), sep=';')
-            data.to_excel(self.resource_path('./output.xlsx'), 'Sheet1')
+            name = self.file_system.export(self.exportData)
+            if name:
+                tkinter.messagebox.showinfo(message="\""+name+"\"" +
+                                            " fue guardado exitosamente!",
+                                            title="Archivo Guardado!")
         if(option == 3):
             sys.exit()
 
