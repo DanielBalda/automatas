@@ -156,13 +156,13 @@ class Interface(Api, File_System):
 
         # Posicion de los elementos
         btnOpen.place(x=20, y=10)
-        dateTitle.place(x=310, y=10)
-        title1.place(x=110, y=70)
-        self.calFirst.place(x=220, y=70)
-        title2.place(x=480, y=70)
-        self.calLast.place(x=575, y=70)
-        self.btnFilter.place(x=380, y=135)
-        title3.place(x=372, y=185)
+        dateTitle.place(x=340, y=10)
+        title1.place(x=140, y=70)
+        self.calFirst.place(x=250, y=70)
+        title2.place(x=510, y=70)
+        self.calLast.place(x=615, y=70)
+        self.btnFilter.place(x=410, y=135)
+        title3.place(x=403, y=185)
         scroll.place(x=893, y=220, height=612)
         self.textBox.place(x=4, y=220)
         self.btnExport.place(x=20, y=845)
@@ -262,11 +262,13 @@ class Interface(Api, File_System):
             self.textBox.insert(tkinter.INSERT,
                                 resultsBox,
                                 'lightblue')
+            self.btnExport['state'] = 'normal'
         else:
             resultsBox = "SIN COINCIDENCIAS"
             self.textBox.insert(tkinter.INSERT,
                                 resultsBox,
                                 'lightblue')
+            self.btnExport['state'] = 'disabled'
 
     def filter(self):
         if self.calFirst.get() == "":
@@ -303,7 +305,6 @@ class Interface(Api, File_System):
         if(option == 1 and self.checkInputs()):
             self.textBox.delete(1.0, tkinter.END)
             self.filter()
-            self.btnExport['state'] = 'normal'
         if(option == 2):
             name = self.file_system.export(self.exportData)
             if name:
