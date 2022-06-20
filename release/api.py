@@ -14,7 +14,7 @@ class Api():
     def get_data(self):
         count = 0
         for anio in range(self.startYear, date.today().year+1):
-            url = 'http://nolaborables.com.ar/api/v22/feriados/'+str(anio)
+            url = 'http://nolaborables.com.ar/api/v2/feriados/'+str(anio)
             response = requests.get(url)
             if(response.status_code == 200):
                 for element in response.json():
