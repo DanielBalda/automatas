@@ -19,7 +19,7 @@ class Interface(Api, File_System):
     def __init__(self):
         self.file_system = File_System()
         api = Api()
-        self.date = api.get_data()
+        self.date, self.reason = api.get_data()
         self.weekendsDate = api.get_weekends()
         self.window = tkinter.Tk()
         self.window.config(background="#333333")
@@ -106,7 +106,9 @@ class Interface(Api, File_System):
                                     background="#1E1E1E",
                                     font=("Consolas", 20),
                                     yscrollcommand=scroll.set)
-        self.textBox.tag_configure("lightblue", foreground="#11A8CD", justify='center')
+        self.textBox.tag_configure("lightblue",
+                                   foreground="#11A8CD",
+                                   justify='center')
         scroll.config(command=self.textBox.yview)
 
         self.btnExport = tkinter.Button(self.window,
@@ -272,7 +274,7 @@ class Interface(Api, File_System):
 
     def filter(self):
         if self.calFirst.get() == "":
-            self.calFirst.insert(-1, "01/01/1999")
+            self.calFirst.insert(-1, "01/01/2011")
         if self.calLast.get() == "":
             self.calLast.insert(-1, dt.today().strftime("%d/%m/%Y"))
         self.exportData = []
@@ -290,7 +292,12 @@ class Interface(Api, File_System):
                         Last = tm.strptime(self.calLast.get(),
                                            "%d/%m/%Y")
                         if(dateFile >= First and dateFile <= Last):
-                            self.exportData.append([line, date, time])
+                            try:
+                                pos = self.date.index(date)
+                                reason = self.reason[pos]
+                            except ValueError:
+                                reason = '-'
+                            self.exportData.append([line, date, time, reason])
                             filtered += 1
                 else:
                     errors += 1
