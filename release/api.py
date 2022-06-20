@@ -9,10 +9,12 @@ class Api():
         self.dataApi = []
         self.reason = []
         self.dataPd = []
+        self.startYear = 2011
 
     def get_data(self):
-        for anio in range(2011, date.today().year+1):
-            url = 'http://nolaborables.com.ar/api/v2/feriados/'+str(anio)
+        count = 0
+        for anio in range(self.startYear, date.today().year+1):
+            url = 'http://nolaborables.com.ar/api/v22/feriados/'+str(anio)
             response = requests.get(url)
             if(response.status_code == 200):
                 for element in response.json():
@@ -20,17 +22,24 @@ class Api():
                                         f'{element["mes"]:02d}/' +
                                         str(anio))
                     self.reason.append(element["motivo"])
-            else:
-                print("Error al obtener los datos")
-                # Aca deberiamos tener un archivo con los feriados
-                # en caso de que la API no responda
-                # o tener una exepcion ante el error y reintentar unas 3 veces
-                pass
+                count += 1
+        if(count == date.today().year+1 - self.startYear):
+            with open("feriados.txt", "w", encoding="utf-8") as file:
+                for i in range(len(self.dataApi)):
+                    file.write(f'{self.dataApi[i]}\t{self.reason[i]}\n')
+        else:
+            try:
+                with open("feriados.txt", "r", encoding="utf-8") as file:
+                    for line in file:
+                        self.dataApi.append(line.split('\t')[0])
+                        self.reason.append(line.split('\t')[1])
+            except Exception:
+                print("No se pudo leer el archivo")
         return self.dataApi, self.reason
 
     def get_weekends(self):
         zone = 'America/Argentina/Buenos_Aires'
-        self.dataPd = pd.bdate_range(start=str(2011),
+        self.dataPd = pd.bdate_range(start=str(self.startYear),
                                      end=str(date.today().year+1),
                                      freq="C",
                                      weekmask="Sat Sun",
