@@ -35,6 +35,7 @@ class Api():
                         self.reason.append(line.split('\t')[1])
             except Exception:
                 print("No se pudo leer el archivo")
+                exit()
         return self.dataApi, self.reason
 
     def get_weekends(self):
