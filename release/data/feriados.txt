@@ -1,0 +1,216 @@
+01/01/2011	Año Nuevo
+07/02/2011	Carnaval
+08/02/2011	Carnaval
+24/03/2011	Día Nacional de la Memoria por la Verdad y la Justicia
+25/03/2011	Feriado Puente Turístico
+02/04/2011	Día del Veterano y de los Caídos en la Guerra de Malvinas
+22/04/2011	Viernes Santo Festividad Cristiana
+01/05/2011	Día del Trabajador
+25/05/2011	Día de la Revolución de Mayo
+20/06/2011	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2011	Día de la Independencia
+22/08/2011	Paso a la Inmortalidad del General José de San Martín
+10/10/2011	Día del Respeto a la Diversidad Cultural
+28/11/2011	Día de la Soberanía Nacional
+08/12/2011	Inmaculada Concepción de María
+09/12/2011	Feriado Puente Turístico
+25/12/2011	Navidad
+01/01/2012	Año Nuevo
+20/02/2012	Carnaval
+21/02/2012	Carnaval
+27/02/2012	Día del Bicentenario de la Creación y Primera Jura de la Bandera Argentina
+24/03/2012	Día Nacional de la Memoria por la Verdad y la Justicia
+02/04/2012	Día del Veterano y de los Caídos en la Guerra de Malvinas
+06/04/2012	Viernes Santo Festividad Cristiana
+01/05/2012	Día del Trabajador
+25/05/2012	Día de la Revolución de Mayo
+20/06/2012	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2012	Día de la Independencia
+20/08/2012	Paso a la Inmortalidad del General José de San Martín
+24/09/2012	Bicentenario de la Batalla de Tucumán
+08/10/2012	Día del Respeto a la Diversidad Cultural
+26/11/2012	Día de la Soberanía Nacional
+08/12/2012	Inmaculada Concepción de María
+24/12/2012	Feriado Puente Turístico
+25/12/2012	Navidad
+01/01/2013	Año Nuevo
+31/01/2013	Año del Bicentenario de la Asamblea General Constituyente de 1813
+11/02/2013	Carnaval
+12/02/2013	Carnaval
+20/02/2013	Bicentenario de la Batalla de Salta
+24/03/2013	Día Nacional de la Memoria por la Verdad y la Justicia
+29/03/2013	Viernes Santo Festividad Cristiana
+01/04/2013	Feriado Puente Turístico
+02/04/2013	Día del Veterano y de los Caídos en la Guerra de Malvinas
+01/05/2013	Día del Trabajador
+25/05/2013	Día de la Revolución de Mayo
+20/06/2013	Paso a la Inmortalidad del General Manuel Belgrano
+21/06/2013	Feriado Puente Turístico
+09/07/2013	Día de la Independencia
+19/08/2013	Paso a la Inmortalidad del General José de San Martín
+14/10/2013	Día del Respeto a la Diversidad Cultural
+25/11/2013	Día de la Soberanía Nacional
+08/12/2013	Inmaculada Concepción de María
+25/12/2013	Navidad
+01/01/2014	Año Nuevo
+03/03/2014	Carnaval
+04/03/2014	Carnaval
+24/03/2014	Día Nacional de la Memoria por la Verdad y la Justicia
+02/04/2014	Día del Veterano y de los Caídos en la Guerra de Malvinas
+18/04/2014	Viernes Santo Festividad Cristiana
+01/05/2014	Día del Trabajador
+02/05/2014	Feriado Puente Turístico
+25/05/2014	Día de la Revolución de Mayo
+20/06/2014	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2014	Día de la Independencia
+18/08/2014	Paso a la Inmortalidad del General José de San Martín
+13/10/2014	Día del Respeto a la Diversidad Cultural
+24/11/2014	Día de la Soberanía Nacional
+08/12/2014	Inmaculada Concepción de María
+25/12/2014	Navidad
+26/12/2014	Feriado Puente Turístico
+01/01/2015	Año Nuevo
+16/02/2015	Carnaval
+17/02/2015	Carnaval
+23/03/2015	Feriado Puente Turístico
+24/03/2015	Día Nacional de la Memoria por la Verdad y la Justicia
+02/04/2015	Día del Veterano y de los Caídos en la Guerra de Malvinas
+03/04/2015	Viernes Santo Festividad Cristiana
+01/05/2015	Día del Trabajador
+25/05/2015	Día de la Revolución de Mayo
+20/06/2015	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2015	Día de la Independencia
+17/08/2015	Paso a la Inmortalidad del General José de San Martín
+12/10/2015	Día del Respeto a la Diversidad Cultural
+27/11/2015	Día de la Soberanía Nacional
+07/12/2015	Feriado Puente Turístico
+08/12/2015	Inmaculada Concepción de María
+25/12/2015	Navidad
+01/01/2016	Año Nuevo
+08/02/2016	Carnaval
+09/02/2016	Carnaval
+24/03/2016	Día Nacional de la Memoria por la Verdad y la Justicia
+25/03/2016	Viernes Santo Festividad Cristiana
+02/04/2016	Día del Veterano y de los Caídos en la Guerra de Malvinas
+01/05/2016	Día del Trabajador
+25/05/2016	Día de la Revolución de Mayo
+17/06/2016	Paso a la Inmortalidad del Gral. Don Martín Güemes
+20/06/2016	Paso a la Inmortalidad del General Manuel Belgrano
+08/07/2016	Feriado Puente Turístico
+09/07/2016	Día de la Independencia
+15/08/2016	Paso a la Inmortalidad del General José de San Martín
+10/10/2016	Día del Respeto a la Diversidad Cultural
+28/11/2016	Día de la Soberanía Nacional
+08/12/2016	Inmaculada Concepción de María
+09/12/2016	Feriado Puente Turístico
+25/12/2016	Navidad
+01/01/2017	Año Nuevo
+27/02/2017	Carnaval
+28/02/2017	Carnaval
+24/03/2017	Día Nacional de la Memoria por la Verdad y la Justicia
+02/04/2017	Día del Veterano y de los Caídos en la Guerra de Malvinas
+14/04/2017	Viernes Santo Festividad Cristiana
+01/05/2017	Día del Trabajador
+25/05/2017	Día de la Revolución de Mayo
+17/06/2017	Paso a la Inmortalidad del Gral. Don Martín Güemes
+20/06/2017	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2017	Día de la Independencia
+21/08/2017	Paso a la Inmortalidad del General José de San Martín
+16/10/2017	Día del Respeto a la Diversidad Cultural
+20/11/2017	Día de la Soberanía Nacional
+08/12/2017	Inmaculada Concepción de María
+25/12/2017	Navidad
+01/01/2018	Año Nuevo
+12/02/2018	Carnaval
+13/02/2018	Carnaval
+24/03/2018	Día Nacional de la Memoria por la Verdad y la Justicia
+30/03/2018	Viernes Santo Festividad Cristiana
+02/04/2018	Día del Veterano y de los Caídos en la Guerra de Malvinas
+01/05/2018	Día del Trabajador
+25/05/2018	Día de la Revolución de Mayo
+17/06/2018	Paso a la Inmortalidad del Gral. Don Martín Güemes
+20/06/2018	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2018	Día de la Independencia
+20/08/2018	Paso a la Inmortalidad del General José de San Martín
+15/10/2018	Día del Respeto a la Diversidad Cultural
+19/11/2018	Día de la Soberanía Nacional
+08/12/2018	Inmaculada Concepción de María
+24/12/2018	Feriado Puente Turístico
+25/12/2018	Navidad
+31/12/2018	Feriado Puente Turístico
+01/01/2019	Año Nuevo
+04/03/2019	Carnaval
+05/03/2019	Carnaval
+24/03/2019	Día Nacional de la Memoria por la Verdad y la Justicia
+02/04/2019	Día del Veterano y de los Caídos en la Guerra de Malvinas
+19/04/2019	Viernes Santo Festividad Cristiana
+01/05/2019	Día del Trabajador
+25/05/2019	Día de la Revolución de Mayo
+17/06/2019	Paso a la Inmortalidad del Gral. Don Martín Güemes
+20/06/2019	Paso a la Inmortalidad del General Manuel Belgrano
+08/07/2019	Feriado Puente Turístico
+09/07/2019	Día de la Independencia
+17/08/2019	Paso a la Inmortalidad del General José de San Martín
+19/08/2019	Feriado Puente Turístico
+12/10/2019	Día del Respeto a la Diversidad Cultural
+14/10/2019	Feriado Puente Turístico
+18/11/2019	Día de la Soberanía Nacional
+08/12/2019	Inmaculada Concepción de María
+25/12/2019	Navidad
+01/01/2020	Año Nuevo
+24/02/2020	Carnaval
+25/02/2020	Carnaval
+23/03/2020	Feriado Puente Turístico
+24/03/2020	Día Nacional de la Memoria por la Verdad y la Justicia
+31/03/2020	Día del Veterano y de los Caídos en la Guerra de Malvinas
+10/04/2020	Viernes Santo Festividad Cristiana
+01/05/2020	Día del Trabajador
+25/05/2020	Día de la Revolución de Mayo
+15/06/2020	Paso a la Inmortalidad del Gral. Don Martín Güemes
+20/06/2020	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2020	Día de la Independencia
+10/07/2020	Feriado Puente Turístico
+17/08/2020	Paso a la Inmortalidad del General José de San Martín
+12/10/2020	Día del Respeto a la Diversidad Cultural
+23/11/2020	Día de la Soberanía Nacional
+07/12/2020	Feriado Puente Turístico
+08/12/2020	Inmaculada Concepción de María
+25/12/2020	Navidad
+01/01/2021	Año Nuevo
+15/02/2021	Carnaval
+16/02/2021	Carnaval
+24/03/2021	Día Nacional de la Memoria por la Verdad y la Justicia
+02/04/2021	Día del Veterano y de los Caídos en la Guerra de Malvinas
+02/04/2021	Viernes Santo Festividad Cristiana
+01/05/2021	Día del Trabajador
+24/05/2021	Feriado Puente Turístico
+25/05/2021	Día de la Revolución de Mayo
+20/06/2021	Paso a la Inmortalidad del General Manuel Belgrano
+21/06/2021	Paso a la Inmortalidad del Gral. Don Martín Güemes
+09/07/2021	Día de la Independencia
+16/08/2021	Paso a la Inmortalidad del General José de San Martín
+08/10/2021	Feriado Puente Turístico
+11/10/2021	Día del Respeto a la Diversidad Cultural
+20/11/2021	Día de la Soberanía Nacional
+22/11/2021	Feriado Puente Turístico
+08/12/2021	Inmaculada Concepción de María
+25/12/2021	Navidad
+01/01/2022	Año Nuevo
+28/02/2022	Carnaval
+01/03/2022	Carnaval
+24/03/2022	Día Nacional de la Memoria por la Verdad y la Justicia
+02/04/2022	Día del Veterano y de los Caídos en la Guerra de Malvinas
+15/04/2022	Viernes Santo Festividad Cristiana
+01/05/2022	Día del Trabajador
+25/05/2022	Día de la Revolución de Mayo
+17/06/2022	Paso a la Inmortalidad del Gral. Don Martín Güemes
+20/06/2022	Paso a la Inmortalidad del General Manuel Belgrano
+09/07/2022	Día de la Independencia
+15/08/2022	Paso a la Inmortalidad del General José de San Martín
+07/10/2022	Feriado Puente Turístico
+10/10/2022	Día del Respeto a la Diversidad Cultural
+20/11/2022	Día de la Soberanía Nacional
+21/11/2022	Feriado Puente Turístico
+08/12/2022	Inmaculada Concepción de María
+09/12/2022	Feriado Puente Turístico
+25/12/2022	Navidad

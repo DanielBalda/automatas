@@ -24,12 +24,12 @@ class Api():
                     self.reason.append(element["motivo"])
                 count += 1
         if(count == date.today().year+1 - self.startYear):
-            with open("feriados.txt", "w", encoding="utf-8") as file:
+            with open("data/feriados.txt", "w", encoding="utf-8") as file:
                 for i in range(len(self.dataApi)):
                     file.write(f'{self.dataApi[i]}\t{self.reason[i]}\n')
         else:
             try:
-                with open("feriados.txt", "r", encoding="utf-8") as file:
+                with open("data/feriados.txt", "r", encoding="utf-8") as file:
                     for line in file:
                         self.dataApi.append(line.split('\t')[0])
                         self.reason.append(line.split('\t')[1])

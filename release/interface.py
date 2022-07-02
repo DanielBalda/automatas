@@ -1,8 +1,3 @@
-# Seguimiento de los usuarios que se han conectado días feriados y
-# no laborables (sábados y domingos).
-# Debe incluir la posibilidad de ingresar un rango de fechas
-
-
 import tkinter
 import os
 import sys
@@ -158,13 +153,13 @@ class Interface(Api, File_System):
 
         # Posicion de los elementos
         btnOpen.place(x=20, y=10)
-        dateTitle.place(x=340, y=10)
-        title1.place(x=140, y=70)
-        self.calFirst.place(x=250, y=70)
-        title2.place(x=510, y=70)
-        self.calLast.place(x=615, y=70)
-        self.btnFilter.place(x=410, y=135)
-        title3.place(x=403, y=185)
+        dateTitle.place(x=330, y=10)
+        title1.place(x=130, y=70)
+        self.calFirst.place(x=240, y=70)
+        title2.place(x=500, y=70)
+        self.calLast.place(x=605, y=70)
+        self.btnFilter.place(x=400, y=135)
+        title3.place(x=393, y=185)
         scroll.place(x=893, y=220, height=612)
         self.textBox.place(x=4, y=220)
         self.btnExport.place(x=20, y=845)
@@ -224,6 +219,7 @@ class Interface(Api, File_System):
         return False
 
     def checkId(self, id):
+        # formato ID que contiene 16 caracteres alfanumericos
         REId = r'([a-z0-9]{16})'
         if re.match(REId, id):
             return True
