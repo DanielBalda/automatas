@@ -190,7 +190,7 @@ class Interface(Api, File_System):
             self.btnFilter['state'] = 'disabled'
 
     def checkInputs(self):
-        REDate = r'(?:3[01]|[12][0-9]|0?[1-9])([-\/])(0?[1-9]|1[0-2])\1\d{4}'
+        REDate = r'(?:3[01]|[12][0-9]|0?[1-9])([/])(0?[1-9]|1[0-2])\1\d{4}'
         checkDate = 0
         self.flag = 0
         if(self.calFirst.get() == "" and self.calLast.get() == ""):
@@ -227,7 +227,7 @@ class Interface(Api, File_System):
 
     def checkDate(self, date):
         # formato 00/00/0000
-        REDate = r'(?:3[01]|[12][0-9]|0?[1-9])([-\/])(0?[1-9]|1[0-2])\1\d{4}'
+        REDate = r'(?:3[01]|[12][0-9]|0?[1-9])([/])(0?[1-9]|1[0-2])\1\d{4}'
         if re.match(REDate, date):
             return True
         return False
