@@ -60,4 +60,4 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 >Paso 3: Exportar registro
 
 <p><img src="https://github.com/DanielBalda/automatas/blob/main/release/images/exportar1.png" align="left" height="400" width="400" position="r"></div>
-<p><img src="https://github.com/DanielBalda/automatas/blob/main/release/images/exportar:nombre.png" align="center" height="400" width="400" ></p>
+<p><img src="https://github.com/DanielBalda/automatas/blob/main/release/images/exportar_nombre.png" align="center" height="400" width="400" ></p>
