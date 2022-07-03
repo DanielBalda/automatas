@@ -8,25 +8,30 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 
 ------------
 
-	 1) Clonar repositorio https://github.com/DanielBalda/automatas.git
-	 2) Abrir terminal y escribir "./install.sh".
-	 3) Abrir terminal y ejecutar Proyecto Automatas.py
-	 4) En el botón "Abrir Archivo" selecciona tu registro
-	 5) Ingrese rango de fechas
-	 6) Finalmente presione "Buscar"
+#### *Clonar repositorio*
+ $ `git clone https://github.com/DanielBalda/automatas.git`
+#### *Instalar dependencias*
+ $` Abrir terminal y escribir "./install.sh".`
+
+###### Uso:
+
+	 1) Abrir terminal y ejecutar Proyecto Automatas.py
+	 2) En el botón "Abrir Archivo" selecciona tu registro
+	 3) Ingrese rango de fechas
+	 4) Finalmente presione "Buscar"
 
 
 ###### Exportar archivo:
-	 1) Seleccionar Exportar
-	 2) Luego *Guardar*
+	 1) Seleccionar "Exportar"
+	 2) Luego "Guardar"
 ------------
-#### Archivos soportados
+### Archivos soportados &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔴IMPORTANTE❗🔴
  ✔️.txt
  ✔️.xlsx
  ✔️.csv
 
 ------------
-#### Librerias utilizadas  📚
+### Librerias utilizadas  📚
 💎os
 💎sys
 💎re
@@ -38,3 +43,9 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 💎prettytable
 💎locale
 💎requests
+
+------------
+## Tutorial
+>Paso 1: Abrir Archivo
+
+<img src="https://github.com/DanielBalda/automatas/blob/main/release/images/abrir_archivo.png" width="400">
