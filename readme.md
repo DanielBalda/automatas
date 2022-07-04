@@ -1,4 +1,4 @@
-# Autómatas
+# <a name="introduccion"> Autómatas </a>
 ![Alt Text](https://media3.giphy.com/media/L1R1tvI9svkIWwpVYr/200w.webp?cid=ecf05e4765u0zjv23vmsfmb51gf7il494gbhm55ve4xk2uzq&rid=200w.webp&ct=g)
 ------------
 Autómatas es un proyecto realizado en python que permite al usuario, a partir de un registro, hacer seguimiento de las personas que se conectaron a la red días feriados y no laborales.
@@ -32,8 +32,11 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 		<li>"locale", librería para leer/escribir archivos de Excel 2010 con extensiones xlsx/xlsm/xltx/xltm.</li>
 	</ul>
 
+<p>💡Ante posibles fallas en la API , ya sea por indisponibilidad online o modificación, decidimos proporcionar un archivo de texto con todos los días feriados desde el año 2011 hasta el presente año (2022). Para los años siguientes deberá modificarse el archivo con los nuevos años.</p>
+
 ------------
 <ol>
+<li><a href="#introduccion">Descripción</a></li>
 <li><a href="#historia">Procedimientos</a></li>
 <li><a href="#instalacion">Instalación</a></li>
 <li><a href="#archivos">Archivos Soportados</a></li>
