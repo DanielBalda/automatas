@@ -32,7 +32,7 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 		<li>"locale", librería para leer/escribir archivos de Excel 2010 con extensiones xlsx/xlsm/xltx/xltm.</li>
 	</ul>
 
-<p>💡Ante posibles fallas en la API , ya sea por indisponibilidad online o modificación, decidimos proporcionar un archivo de texto con todos los días feriados desde el año 2011 hasta el presente año (2022). Para los años siguientes deberá modificarse el archivo con los nuevos años.</p>
+<p>💡Ante posibles fallas en la API , ya sea por indisponibilidad online o modificación, decidimos proporcionar un archivo de texto con todos los días feriados desde el año 2011 hasta el presente año, incluyendo futuros años</p>
 
 ------------
 <ol>
