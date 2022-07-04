@@ -15,9 +15,21 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 		<ul>b. Verificación de aquellas direcciones <span>*ID*</span> con 16 caracteres alfanuméricos</ul>
 		<ul>c. Verificación del horario en formato 24hr </ul>
 	<li>Comprobación y eliminación de espacios en blanco contenidos en el archivo de registro provisto</li>
-	<li>Consultas a una API por cuestiones de practicidad y simplicidad. En nuestro caso utilizamos la API provista por 'http://nolaborables.com.ar', la cual nos permite obtener desde el año 2011 todos aquellos días feriados</li>
-	<li>Tkinter. Una librería intuitiva de python que le brinda al usuario final una interfaz amigable permitiendole facilidad en el uso de la aplicación</li>
+	<li>Consultas a una API por cuestiones de practicidad y simplicidad. En nuestro caso utilizamos la API provista por 'http://nolaborables.com.ar', la cual 		nos permitió obtener desde el año 2011 todos aquellos días feriados</li>
+	<li>Tkinter. Una librería intuitiva de python que le brinda al usuario final una interfaz amigable permitiendole facilidad en el uso de la aplicación. Para 		el programa se estableció una resolución claramente visible para el usuario (915x900px), en el cual se le da la opcion de importar un archivo y a su vez 		exportarlo. Podrá ingresar también un rango de fechas a analizar, el cual los colores:</li>
+		<ul>🟢 Nos indicará que la fecha fue ingresada correctamente</ul>
+		<ul>🔴 Nos indicará que la fecha fue ingresada incorrectamente</ul>
+	
 </ul>
+<p>En cuanto a librerías de python se utilizó:</p>
+	<ul>
+		<li>"re",módulo que nos proporciona operaciones de coincidencia de expresiones regulares</li>
+		<li>"requests", el cual era necesario para consumir la API</li>
+		<li>"datetime", módulo para manipular fechas y horas</li>
+		<li>"pandas", poderoso open source de analisis de datos y herramientas de manipulación.El cual utilizamos los siguientes métodos para nuestra 			finalidad:</li>
+			<ul>bdate_range()</ul>
+			<ul>DataFrame()</ul>
+	</ul>
 
 ------------
 <ol>
