@@ -5,7 +5,29 @@ Autómatas es un proyecto realizado en python que permite al usuario, a partir d
 
 Para esto se le brinda al usuario final la posibilidad de ingresar un rango de fechas.
 
-## Instalación 🧪
+## <a name="historia">Historia </a>
+
+<p>Por empezar se nos brindó la consigna que consistía en hacer un seguimiento de aquellos usuarios que se conectaron a una red específica los días feriados y no laborales(Sábados y Domingos), con la posibilidad de ingresar un rango de fechas.</p>
+<p>Comenzamos realizando los análisis de requerimientos solicitados. Se realizó un planteo de soluciones y posibles problemas. Se plantéo utilizar:</p>
+<ul>
+	<li>Expresiones regulares para:
+		<ul>a. Verificación de fechas ingresadas en la aplicación, como también reconocimiento de fechas en el archivo porvisto</ul>
+		<ul>b. Verificación de aquellas direcciones con 16 caracteres alfanuméricos</ul>
+	<li>Comprobación y eliminación de espacios en blanco contenidos en el archivo de registro provisto</li>
+	<li>Consultas a una API por cuestiones de practicidad y simplicidad. En nuestro caso utilizamos la API provista por 'http://nolaborables.com.ar', la cual nos permite obtener desde el año 2011 todos aquellos días feriados</li>
+	<li>Tkinter. Una librería intuitiva de python que le brinda al usuario final una interfaz amigable permitiendole facilidad en el uso de la aplicación</li>
+</ul>
+
+------------
+<ol>
+<li><a href="#historia">Historia</a></li>
+<li><a href="#instalacion">Instalación</a></li>
+<li><a href="#archivos">Archivos Soportados</a></li>
+<li><a href="#librerias">Librerías Utilizadas</a></li>
+<li><a href="#tutorial">Tutorial</a></li>
+</ol>
+
+## <a name="instalacion">Instalación 🧪 </a>
 
 ------------
 
@@ -26,13 +48,13 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 	 1) Seleccionar "Exportar"
 	 2) Luego "Guardar"
 ------------
-### Archivos soportados &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔴IMPORTANTE❗🔴
+### <a name="archivos"> Archivos soportados </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔴IMPORTANTE❗🔴
  ✔️.txt
  ✔️.xlsx
  ✔️.csv
 
 ------------
-### Librerias utilizadas  📚
+### <a name="librerias"> Librerias utilizadas  📚 </a>
 💎os
 💎sys
 💎re
