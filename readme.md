@@ -5,7 +5,7 @@ Autómatas es un proyecto realizado en python que permite al usuario, a partir d
 
 Para esto se le brinda al usuario final la posibilidad de ingresar un rango de fechas.
 
-## <a name="historia">Historia </a>
+## <a name="historia">Procedimientos 📜 </a>
 
 <p>Por empezar se nos brindó la consigna que consistía en hacer un seguimiento de aquellos usuarios que se conectaron a una red específica los días feriados y no laborales (Sábados y Domingos), con la posibilidad de ingresar un rango de fechas.</p>
 <p>Comenzamos realizando los análisis de requerimientos solicitados. Se realizó un planteo de soluciones y posibles problemas. Se plantéo utilizar:</p>
@@ -29,11 +29,12 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 		<li>"pandas", poderoso open source de analisis de datos y herramientas de manipulación.El cual utilizamos los siguientes métodos para nuestra 			finalidad:</li>
 			<ul>➡️bdate_range()</ul>
 			<ul>➡️DataFrame()</ul>
+		<li>"locale", librería para leer/escribir archivos de Excel 2010 con extensiones xlsx/xlsm/xltx/xltm.</li>
 	</ul>
 
 ------------
 <ol>
-<li><a href="#historia">Historia</a></li>
+<li><a href="#historia">Procedimientos</a></li>
 <li><a href="#instalacion">Instalación</a></li>
 <li><a href="#archivos">Archivos Soportados</a></li>
 <li><a href="#librerias">Librerías Utilizadas</a></li>
