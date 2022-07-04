@@ -7,7 +7,7 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 
 ## <a name="historia">Procedimientos 📜 </a>
 
-<p>Por empezar se nos brindó la consigna que consistía en hacer un seguimiento de aquellos usuarios que se conectaron a una red específica los días feriados y no laborales (Sábados y Domingos), con la posibilidad de ingresar un rango de fechas.</p>
+<p>Por empezar se nos brindó la consigna que consistía en hacer seguimiento de aquellos usuarios que se conectaron a una red específica los días feriados y no laborales (Sábados y Domingos), con la posibilidad de ingresar un rango de fechas.</p>
 <p>Comenzamos realizando los análisis de requerimientos solicitados. Se realizó un planteo de soluciones y posibles problemas. Se plantéo utilizar:</p>
 <ul>
 	<li>Expresiones regulares para:
