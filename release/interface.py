@@ -221,7 +221,7 @@ class Interface(Api, File_System):
 
     def checkId(self, id):
         # formato ID que contiene 16 caracteres alfanumericos
-        REId = r'([a-z0-9]{16})'
+        REId = r'(^[a-z0-9]{16}$)'
         if re.match(REId, id):
             return True
         return False
