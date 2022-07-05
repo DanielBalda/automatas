@@ -1,4 +1,4 @@
-# <div align="center"><a name="introduccion"> Autómatas </a>
+# <div align="center"><a name="introduccion"> Autómatas y Gramaticas </a>
 <p align="center">
   <img src="https://media3.giphy.com/media/L1R1tvI9svkIWwpVYr/200w.webp?cid=ecf05e4765u0zjv23vmsfmb51gf7il494gbhm55ve4xk2uzq&rid=200w.webp&ct=g" width=400 />
 </p>
