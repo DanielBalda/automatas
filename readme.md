@@ -15,7 +15,7 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 <p>Comenzamos realizando los análisis de requerimientos solicitados. Se realizó un planteo de soluciones y posibles problemas. Se plantéo utilizar:</p>
 <ul>
 	<li>Expresiones regulares para:
-		<ul>a. Verificación de fechas ingresadas en la aplicación, como también reconocimiento de fechas en el archivo porvisto.</ul>
+		<ul>a. Verificación de fechas ingresadas en la aplicación, como también reconocimiento de fechas en el archivo provisto.</ul>
 		<ul>b. Verificación de aquellas direcciones <span>*ID*</span> con 16 caracteres alfanuméricos.</ul>
 		<ul>c. Verificación del horario en formato 24hr. </ul>
 	<li>Comprobación y eliminación de espacios en blanco contenidos en el archivo de registro provisto</li>
