@@ -20,7 +20,7 @@ Para esto se le brinda al usuario final la posibilidad de ingresar un rango de f
 		<ul>c. Verificación del horario en formato 24hr. </ul>
 	<li>Comprobación y eliminación de espacios en blanco contenidos en el archivo de registro provisto</li>
 	<li>Consultas a una API por cuestiones de practicidad y simplicidad. En nuestro caso utilizamos la API provista por 'http://nolaborables.com.ar', la cual 		nos permitió obtener desde el año 2011 todos aquellos días feriados.</li>
-	<li>Tkinter. Una librería intuitiva de python que le brinda al usuario final una interfaz amigable permitiendole facilidad en el uso de la aplicación. Para 		el programa se estableció una resolución claramente visible para el usuario (915x900px), en el cual se le da la opcion de importar un archivo y a su vez 		exportarlo. Podrá ingresar también un rango de fechas a analizar, el cual los colores:</li>
+	<li>Tkinter. Una librería intuitiva de python que le brinda al usuario final una interfaz amigable permitiendole facilidad en el uso de la aplicación. Para 		el programa se estableció una resolución claramente visible para el usuario (915x900px), en el cual se le da la opción de importar un archivo y a su vez 		exportarlo. Podrá ingresar también un rango de fechas a analizar, el cual los colores:</li>
 		<ul>🟢 Nos indicará que la fecha fue ingresada correctamente.</ul>
 		<ul>🔴 Nos indicará que la fecha fue ingresada incorrectamente.</ul>
 	
