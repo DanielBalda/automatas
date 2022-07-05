@@ -1,11 +1,11 @@
-# <div align="center"><a name="introduccion"> Autómatas y Gramaticas </a>
+# <div align="center"><a name="introduccion"> Autómatas y Gramáticas </a>
 <p align="center">
   <img src="https://media3.giphy.com/media/L1R1tvI9svkIWwpVYr/200w.webp?cid=ecf05e4765u0zjv23vmsfmb51gf7il494gbhm55ve4xk2uzq&rid=200w.webp&ct=g" width=400 />
 </p>
 
 
 ------------
-Autómatas es un proyecto realizado en python que permite al usuario, a partir de un registro, hacer seguimiento de las personas que se conectaron a la red días feriados y no laborales.
+Autómatas y Gramáticas es un proyecto realizado en python que permite al usuario, a partir de un registro, hacer seguimiento de las personas que se conectaron a la red días feriados y no laborales.
 
 Para esto se le brinda al usuario final la posibilidad de ingresar un rango de fechas.
 
